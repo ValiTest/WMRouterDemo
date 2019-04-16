@@ -1,1 +1,2 @@
 include ':app'
+include ':libs:lib1', ':libs:lib1Base', ':libs:lib2', ':libs:lib2Base'
