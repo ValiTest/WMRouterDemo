@@ -1,4 +1,4 @@
-package com.yimi.router.lib2;
+package com.yimi.router.lib2.service;
 
 import com.yimi.router.lib2base.ISocketService;
 

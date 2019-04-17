@@ -1,6 +1,10 @@
 package com.yimi.router.lib1base;
 
+import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.annotation.StringDef;
+
+import com.sankuai.waimai.router.service.IFactory;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -24,7 +28,7 @@ public class Lib1ServiceRouter {
     /**
      * Service实现的默认版本
      * <p>
-     * 该默认实现需要使用该变量和@{@link RouterServicess}注解来标识，
+     * 该默认实现需要使用该变量和@{@link RouterService}注解来标识，
      * 如：@RouterService(interfaces = IService.class, key = Lib2ServiceKey.DEFAULT)
      */
     public static final String DEFAULT = "default";
@@ -59,7 +63,7 @@ public class Lib1ServiceRouter {
     /**
      * Audio Service 的 type2 实现
      * <p>
-     * 参数: {@link #PARAMS_AUDIO_TYPE2}
+     * 参数: {@link AudioParams}
      */
     public static final String AUDIO_TYPE2 = "audio_type2";
 
@@ -67,13 +71,22 @@ public class Lib1ServiceRouter {
     // -------- Service 自定义Params ---------
 
 
-//    /**
-//     * params of {@link #AUDIO_TYPE2}
-//     */
-//    public static final IFactory PARAMS_AUDIO_TYPE2 = new IFactory() {
-//        public Object create(Class clazz) {
-//            return clazz.getConstructor().newInstance();
-//        }
-//    };
+    /**
+     * params of {@link #AUDIO_TYPE2}
+     */
+    public static final class AudioParams implements IFactory {
+        private Context context;
+        private boolean debug;
+        public AudioParams(Context context, boolean debug) {
+            this.context = context;
+            this.debug = debug;
+        }
+
+        @NonNull
+        @Override
+        public <T> T create(@NonNull Class<T> clazz) throws Exception {
+            return clazz.getConstructor(Context.class, boolean.class).newInstance(context, debug);
+        }
+    }
 
 }

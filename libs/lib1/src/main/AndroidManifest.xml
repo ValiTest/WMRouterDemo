@@ -1,2 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.yimi.router.lib1" />
+    package="com.yimi.router.lib1" >
+
+    <application>
+        <activity android:name=".activity.Page1Activity" />
+        <activity android:name=".activity.Page2Activity" />
+    </application>
+</manifest>

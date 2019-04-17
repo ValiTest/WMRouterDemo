@@ -4,7 +4,7 @@ android {
     compileSdkVersion 28
 
     defaultConfig {
-        minSdkVersion 14
+        minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -26,6 +26,13 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
 
-    implementation project(':libs:lib2Base')
+    // router
+    implementation 'com.sankuai.waimai.router:router:1.2.0'
+    annotationProcessor 'com.sankuai.waimai.router:compiler:1.2.0'
+
+    // libs
+    api project(':libs:lib2Base')
+    api project(':libs:lib1Base')
 }

@@ -1,10 +1,12 @@
 apply plugin: 'com.android.application'
+// 应用WMRouter插件
+apply plugin: 'WMRouter'
 
 android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.yimi.router.demo"
-        minSdkVersion 14
+        minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -25,4 +27,13 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    // router
+    implementation 'com.sankuai.waimai.router:router:1.2.0'
+    annotationProcessor 'com.sankuai.waimai.router:compiler:1.2.0'
+
+    // libs
+    implementation project(':libs:lib1')
+    implementation project(':libs:lib2')
+
 }

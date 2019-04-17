@@ -2,6 +2,8 @@ package com.yimi.router.lib2base;
 
 import android.support.annotation.StringDef;
 
+import com.sankuai.waimai.router.service.IFactory;
+
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 

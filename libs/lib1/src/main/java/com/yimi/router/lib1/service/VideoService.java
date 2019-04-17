@@ -1,15 +1,15 @@
-package com.yimi.router.lib1;
+package com.yimi.router.lib1.service;
 
 import android.content.Context;
 import android.widget.Toast;
 
 import com.yimi.router.lib1base.IAudioService;
 
-public class AudioService implements IAudioService {
+public class VideoService implements IAudioService {
 
     Context context;
 
-    public AudioService(Context context) {
+    public VideoService(Context context) {
         this.context = context;
     }
 
