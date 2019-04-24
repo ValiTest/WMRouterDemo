@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
 
         // 方式二
         new DefaultUriRequest(context, Lib1PageRouter.PAGE1)
-                //.activityRequestCode(100)
                 .putExtra(Lib1PageRouter.ParamsKey.PAGE1_PARAMS1_INT, 1)
                 .putExtra(Lib1PageRouter.ParamsKey.PAGE1_PARAMS2_STRING, "str")
                 .overridePendingTransition(R.anim.enter_activity, R.anim.exit_activity)

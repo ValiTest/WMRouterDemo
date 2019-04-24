@@ -74,7 +74,6 @@ public class FragmentPage1 extends Fragment {
      */
     private void jumpFromFragment2Activity() {
         new FragmentUriRequest(FragmentPage1.this, Lib1PageRouter.PAGE1)
-                //.activityRequestCode(100)
                 .putExtra(Lib1PageRouter.ParamsKey.PAGE1_PARAMS1_INT, 1)
                 .putExtra(Lib1PageRouter.ParamsKey.PAGE1_PARAMS2_STRING, "str from lib2 fragment")
                 .overridePendingTransition(R.anim.enter_activity, R.anim.exit_activity)

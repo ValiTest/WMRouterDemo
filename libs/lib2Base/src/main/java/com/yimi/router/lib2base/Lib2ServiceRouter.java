@@ -43,7 +43,7 @@ public class Lib2ServiceRouter {
     /**
      * Socket Service 的默认实现
      * <p>
-     * 参数: 无参数
+     * 参数: 无参数，单例
      */
     @Default
     public static final String SOCKET_DEFAULT = DEFAULT;

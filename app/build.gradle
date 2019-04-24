@@ -32,7 +32,11 @@ dependencies {
     implementation 'com.sankuai.waimai.router:router:1.2.0'
     annotationProcessor 'com.sankuai.waimai.router:compiler:1.2.0'
 
-    // libs
+    // libs 接口
+    implementation project(':libs:lib1Base')
+    implementation project(':libs:lib2Base')
+
+    // libs 实现
     implementation project(':libs:lib1')
     implementation project(':libs:lib2')
 
